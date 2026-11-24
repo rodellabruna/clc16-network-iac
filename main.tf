@@ -1,7 +1,7 @@
 variable "vpc_name" {
   description = "nome da vpc"
   type = string
-  default = "minha-vpc"
+  default = "teste-alteracao"
 }
 
 resource "aws_vpc" "clc_vpc" {
