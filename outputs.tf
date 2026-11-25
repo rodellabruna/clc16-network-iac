@@ -1,3 +1,11 @@
+output "vpc_name" {
+  description = "Nome da VPC"
+  value       = aws_vpc.clc_vpc.tags["Name"]
+  sensitive = true
+}
+
+
+
 output "vpc_id" {
   description = "ID da VPC"
   value       = aws_vpc.clc_vpc.id
@@ -27,7 +35,7 @@ output "private_subnet_1a_id" {
 
 output "rt_pub_assoc_1a_id" {
   description = "ID da associacao da subnet publica 1a com a route table publica"
-  value       = aws_route_table_association.rt_association_subnet_1a.id
+  value       = aws_route_table_association.rt_pub_association_subnet_1a.id
 }
 
 output "eip_nat_gw_1a_id" {
@@ -66,7 +74,7 @@ output "private_subnet_1c_id" {
 ## Fase 2
 output "rt_pub_assoc_1c_id" {
   description = "ID da associacao da subnet publica 1c com a route table publica"
-  value       = aws_route_table_association.rt_association_subnet_1c.id
+  value       = aws_route_table_association.rt_pub_association_subnet_1c.id
 }
 
 ## Fase 3
