@@ -1,11 +1,11 @@
 variable "env" {
     type = string
-    default = "homologacao"
+    default = "prd"
 }
 
 variable "vpc_name" {
     type = string
-    default = "terraform-vpc"
+    default = "rosana-vpc"
 }
 
 variable "pub_subnet_1a_name" {
